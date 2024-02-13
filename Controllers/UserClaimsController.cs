@@ -10,7 +10,7 @@ namespace JWTTokenAPI.Controllers
 { 
    [Route("api/userClaims")]
    [ApiController]
-   [Authorize(Roles = "SAdmin,Admin")]
+   //[Authorize(Roles = "SAdmin,Admin")]
     //[Authorize]
     public class UserClaimsController : ControllerBase
     {
