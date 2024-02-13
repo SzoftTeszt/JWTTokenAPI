@@ -8,9 +8,9 @@ using Microsoft.AspNetCore.Identity;
 
 namespace JWTTokenAPI.Controllers
 { 
-    [Route("api/userClaims")]
+   [Route("api/userClaims")]
    [ApiController]
-    [Authorize(Roles = "SAdmin")]
+   [Authorize(Roles = "SAdmin,Admin")]
     //[Authorize]
     public class UserClaimsController : ControllerBase
     {
@@ -32,6 +32,7 @@ namespace JWTTokenAPI.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "SAdmin")]
         public async Task<IActionResult> Post(RolesModel id)
         {
 
